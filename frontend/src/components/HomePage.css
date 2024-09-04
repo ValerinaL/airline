@@ -1,0 +1,14 @@
+.home-page {
+  background-image: url('/Users/valerina/Desktop/AirlineTicket/frontend/src/assets/pink.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.home-page .text-center {
+  z-index: 1;
+}

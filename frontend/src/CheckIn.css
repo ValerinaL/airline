@@ -1,0 +1,13 @@
+.checkin-btn {
+  background-color: #007bff; /* Custom background color */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.checkin-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
