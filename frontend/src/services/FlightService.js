@@ -1,29 +1,30 @@
 import axios from 'axios';
 
 
+// Create an instance of axios with the base URL
 const flightServiceInstance = axios.create({
-    baseURL: 'http://localhost:8080/api/flights',
+    baseURL: FLIGHT_API_BASE_URL,
 });
 
 class FlightService {
     getAllFlights() {
-        return axios.get(FLIGHT_API_BASE_URL);
+        return flightServiceInstance.get('/');
     }
 
     getFlightById(id) {
-        return axios.get(`${FLIGHT_API_BASE_URL}/${id}`);
+        return flightServiceInstance.get(`/${id}`);
     }
 
     createFlight(flight) {
-        return axios.post(FLIGHT_API_BASE_URL, flight);
+        return flightServiceInstance.post('/', flight);
     }
 
     updateFlight(id, flight) {
-        return axios.put(`${FLIGHT_API_BASE_URL}/${id}`, flight);
+        return flightServiceInstance.put(`/${id}`, flight);
     }
 
     deleteFlight(id) {
-        return axios.delete(`${FLIGHT_API_BASE_URL}/${id}`);
+        return flightServiceInstance.delete(`/${id}`);
     }
 }
 

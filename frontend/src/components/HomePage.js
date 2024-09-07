@@ -1,25 +1,46 @@
 import React from 'react';
-import NavigationBar from './NavigationBar';
-import Footer from './Footer';
 import FlightSearchBoard from './FlightSearchBoard';
-import { Container, Row, Col } from 'react-bootstrap';
-import './HomePage.css';
+import { Box, Typography, Grid2 } from '@mui/material';
+import './HomePage.css'; 
+import pinkImage from '../assets/pink.png';
 
 const HomePage = () => {
   return (
-    <div className="home-page">
-      <NavigationBar />
-      <Container fluid className="text-center text-light d-flex align-items-center justify-content-center flex-grow-1">
-        <Row>
-          <Col>
-            <h1>Welcome to Your Airline</h1>
-            <p>Search and Book Your Flights with Ease</p>
-            <FlightSearchBoard /> {/* Add the FlightSearchBoard component */}
-          </Col>
-        </Row>
-      </Container>
-      <Footer />
-    </div>
+    <Box
+      sx={{
+        position: 'relative',
+        minHeight: '50vh',
+        backgroundImage: `url(${pinkImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        // color: 'white',
+      }}
+  >
+      <Box 
+        component="main"
+        sx={{
+          flexGrow: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          py: 8
+        }}
+      >
+        <Grid2 container spacing={2} justifyContent="center">
+          <Grid2 item xs={12} md={8}>
+            <Typography variant="h2" component="h1" gutterBottom>
+              Welcome to Your Airline
+            </Typography>
+            <Typography variant="h6" paragraph>
+              Search and Book Your Flights with Ease
+            </Typography>
+            <FlightSearchBoard /> 
+          </Grid2>
+        </Grid2>
+      </Box>
+    </Box>
   );
 }
 

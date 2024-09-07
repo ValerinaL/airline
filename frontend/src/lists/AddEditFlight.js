@@ -6,7 +6,7 @@ function AddEditFlight() {
     const [flight, setFlight] = useState({
         flightNumber: '',
         origin: '',
-        destination: '',
+        destination: '', 
         status: '',
         departureTime: '',
         arrivalTime: ''
